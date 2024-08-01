@@ -6,15 +6,34 @@ const textoResultado = document.querySelector('texto-resultado');
  
 const perguntas = [ 
     { 
-       enunciado: "Pergunta 1",
-       alternativa: ["Alternativa 1", "Alternativa 2"],
-    },
-    {
-        enunciado: "Pergunta 2",
-        alternativa: ["Alternativa 1", "Alternativa 2"],
-    },
-];
+      enunciado: "Pergunta 1",
+      alternativa: [ 
+          { 
+            texto: "Alternativa 1"
+            afirmação: "Afirmação da alternativa 1"
+          },
+          {
+            texto: "Alternativa 2"
+            afirmação: "Afirmação da alternativa 2"
+          } 
+     ]
+ }  
+]  
+
 
 function mostraPergunta() {
-    
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent =  perguntaAtual.enunciado;
 }
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("buton");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click",function () { 
+            atual++;
+            mostraPergunta();
+        } );    
+        caixaAlternativas.apendChield(botaoAlternativas);
+    }
+}
+
