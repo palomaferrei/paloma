@@ -1,42 +1,8 @@
-:root{
-    --cor-fundo: #01080e;
-    --cor-principal: #0b0d20;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2bdefd;
-    --cor-texto: #d7f9ff;
-}
+@import
+url(‘https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap’);
 
-body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.caixa-principal {
-    background-color: var(--cor-fundo);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-}
-
-h1 {
-    color: var(--cor-destaque);
-}
-button {
-    background-color: var(--cor-secundaria);
-    color: var (--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3;
-}
-
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
-}
-
+:root {
+    --bg-color: #222831;
+    --primary-color: #DDDDDD;
+    --secundary-color: #F05454;
+    }
